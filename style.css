@@ -35,16 +35,10 @@
 }
 .navbar-menu{
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 80px;
     list-style: none;
 }
 .menu-item{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 125px;
     height: 80px;
 }
 .menu-links{
@@ -102,9 +96,38 @@
         height: 70vh;
         width: 100%;
         background: #202020;
-        border-radius: 5px;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
         transition: all 0.3s ease;
         z-index: 99;
+        background: #000000;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to top, #434343, #131313);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to top, #434343, #131313); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+    .menu-links{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 2rem;
+    }
+    .menu-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+    .button{
+        height: 80px;
+        width: 80%;
+        margin: auto;
+        border: 2px solid #fff;
+        background: #232526;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to top, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to top, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     }
     .hamburger .bar{
         height: 3px;
