@@ -81,7 +81,7 @@
     max-height: 22rem;
 }
 .carousel-item{
-    height: 60vh;
+    height: 58vh;
     background-color: #131313;
     
 }
@@ -89,7 +89,7 @@
     width: 100%;
     height: auto;
     position: relative;
-    top: -110%;
+    top: -400px;
     opacity: 0.3;
 }
 .carousel-indicators [data-bs-target] {
@@ -98,6 +98,13 @@
     border-radius: 100%;
     margin: 0px 7px;
 }
+.carousel-caption{
+    bottom: 100px;
+}
+.carousel-caption h5{
+    font-size: 2rem;
+}
+/*responsive navbar/hamburger */
 @media screen and (max-width: 760px){
     .navbar-container{
         display: flex;
@@ -179,20 +186,21 @@
         transform: translateY(-8px) rotate(-45deg);
     }
 }
-@media screen and (max-width: 400px){
+/*responsive showcase gallery*/
+@media screen and (max-width: 420px){
     .carousel-item img{
         height: auto;
         width: 100%;
         position: relative;
-        top: -5%;
+        top: -50px;
     }
 }
-@media screen and (min-width: 400px) and (max-width: 500px){
+@media screen and (min-width: 420px) and (max-width: 500px){
     .carousel-item img{
         height: auto; 
         width: 100%;
         position: relative;
-        top: -10%;
+        top: -90px;
     }
     .carousel-control-prev-icon{
         width: 25%;
@@ -206,7 +214,7 @@
         width: 100%;
         height: auto;
         position: relative;
-        top: -40%;
+        top: -140px;
     }
 }
 @media screen and (min-width: 760px) and (max-width: 950px){
@@ -214,7 +222,7 @@
         width: 100%;
         height: auto;
         position: relative;
-        top: -40%;
+        top: -300px;
         opacity: 0.3;
     }
 }
