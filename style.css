@@ -77,7 +77,7 @@
 
 /*show case -gallery*/
 .carousel-inner{
-    height: 60vh;
+    height: 58vh;
     max-height: 22rem;
 }
 .carousel-item{
@@ -89,40 +89,15 @@
     width: 100%;
     height: auto;
     position: relative;
-    top: -50%;
-    opacity: 0.2;
+    top: -110%;
+    opacity: 0.3;
 }
-
-@media screen and (max-width: 400px){
-    .carousel-inner{
-        height: 20vh;
-    }
-    #carouselExampleCaptions{
-        height: 20vh;
-    }
-    .carousel-item img{
-        height: 100%;
-        width: auto;
-    }
+.carousel-indicators [data-bs-target] {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    margin: 0px 7px;
 }
-
-@media screen and (max-width: 500px){
-    .carousel-inner{
-        height: 40vh;
-        width: 100%;
-    }
-    #carouselExampleCaptions{
-        height: 40vh;
-        width: 100%;
-    }
-    .carousel-item img{
-        height: 100%; 
-        position: relative;
-        top: -25%;
-    }
-}
-
-
 @media screen and (max-width: 760px){
     .navbar-container{
         display: flex;
@@ -202,5 +177,44 @@
     }
     #hamb__menu.is-active .bar:nth-child(3){
         transform: translateY(-8px) rotate(-45deg);
+    }
+}
+@media screen and (max-width: 400px){
+    .carousel-item img{
+        height: auto;
+        width: 100%;
+        position: relative;
+        top: -5%;
+    }
+}
+@media screen and (min-width: 400px) and (max-width: 500px){
+    .carousel-item img{
+        height: auto; 
+        width: 100%;
+        position: relative;
+        top: -10%;
+    }
+    .carousel-control-prev-icon{
+        width: 25%;
+    }
+    .carousel-control-next-icon{
+        width: 25%;
+    }
+}
+@media screen and (min-width: 500px) and (max-width: 760px){
+    .carousel-item img{
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: -40%;
+    }
+}
+@media screen and (min-width: 760px) and (max-width: 950px){
+    .carousel-item img{
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: -40%;
+        opacity: 0.3;
     }
 }
