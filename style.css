@@ -183,6 +183,7 @@
 }
 .cont-info ul{
     list-style: none;
+    padding: 0;
 }
 .cont-info li{
     font-size: 1.4rem;
@@ -190,6 +191,10 @@
 .map iframe{
     width: 100%;
     height: 100%;
+}
+/* footer */
+.footer {
+    background-color: #131313;
 }
 /*responsive navbar/hamburger */
 @media screen and (max-width: 760px){
@@ -321,7 +326,7 @@
         display: flex;
         flex-direction: column;
     }
-    .cont-info{
+    .cont-info li{
         font-size: 1rem;
     }
     .map{
