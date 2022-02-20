@@ -17,7 +17,7 @@
     z-index: 999;
     top: 0;
     background-color: #131313;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
 }
 #navbar__logo{
     width: 50px;
@@ -26,6 +26,7 @@
     position: absolute;
     left: 30px;
     top: 15px;
+    cursor: pointer;
 }
 .navbar-container{
     display: flex;
@@ -74,7 +75,20 @@
     padding: 10px 20px;
     transition: all 0.3s ease;
 }
-
+.button:hover{
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+}
+.highlight{
+    border-bottom: 4px #708090 double;
+}
+.highlight-contact{
+    background: #bdc3c7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 /*show case -gallery*/
 .carousel-inner{
     height: 58vh;
@@ -252,8 +266,12 @@
         background: #232526;  /* fallback for old browsers */
         background: -webkit-linear-gradient(to top, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to top, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
     }
+    .button:hover{
+        background: #485563;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #131313, #485563);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #131313, #485563); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+         }
     .hamburger .bar{
         height: 3px;
         width: 25px;
