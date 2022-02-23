@@ -39,55 +39,57 @@ hambIcon.addEventListener('click', popMenu);
 //show active menu when scrolling
 const highlightMenu = () => {
     const elem = document.querySelector('.highlight');
-    const homeMenu = document.querySelector('#home-link');
-    const benefitsMenu = document.querySelector('#benefits-link');
-    const reviewsMenu = document.querySelector('#reviews-link');
-    const contactMenu = document.querySelector('#contact-link');
     let scrollPos = window.scrollY;
-    //adds highlight class to my menu items
+    //adds highlight class to my menu items when device width is more than 1000
     if(window.innerWidth > 1000 && scrollPos < 930){
-        homeMenu.classList.add('highlight');
-        benefitsMenu.classList.remove('highlight');
+        homeLink.classList.add('highlight');
+        benefitsLink.classList.remove('highlight');
         return;
     } else if(window.innerWidth > 1000 && scrollPos < 1550){
-        benefitsMenu.classList.add('highlight');
-        homeMenu.classList.remove('highlight');
-        reviewsMenu.classList.remove('highlight');
+        benefitsLink.classList.add('highlight');
+        homeLink.classList.remove('highlight');
+        reviewsLink.classList.remove('highlight');
         return;
     } else if(window.innerWidth > 1000 && scrollPos < 2150){
-        reviewsMenu.classList.add('highlight');
-        benefitsMenu.classList.remove('highlight');
-        contactMenu.classList.remove('highlight-contact');
+        reviewsLink.classList.add('highlight');
+        benefitsLink.classList.remove('highlight');
+        contactLink.classList.remove('highlight-contact');
         return;
     }else if(window.innerWidth > 1000 && scrollPos > 2150){
-        contactMenu.classList.add('highlight-contact');
-        reviewsMenu.classList.remove('highlight');
-        benefitsMenu.classList.remove('highlight');
+        contactLink.classList.add('highlight-contact');
+        reviewsLink.classList.remove('highlight');
+        benefitsLink.classList.remove('highlight');
         return;
     }
+        //adds highlight class to my menu items when device width is more than 760
     if(window.innerWidth > 760 && scrollPos < 1100){
-        homeMenu.classList.add('highlight');
-        benefitsMenu.classList.remove('highlight');
+        homeLink.classList.add('highlight');
+        benefitsLink.classList.remove('highlight');
         return;
     } else if(window.innerWidth > 760 && scrollPos < 2250){
-        benefitsMenu.classList.add('highlight');
-        homeMenu.classList.remove('highlight');
-        reviewsMenu.classList.remove('highlight');
+        benefitsLink.classList.add('highlight');
+        homeLink.classList.remove('highlight');
+        reviewsLink.classList.remove('highlight');
         return;
     } else if(window.innerWidth > 760 && scrollPos < 2900){
-        reviewsMenu.classList.add('highlight');
-        benefitsMenu.classList.remove('highlight');
-        contactMenu.classList.remove('highlight-contact');
+        reviewsLink.classList.add('highlight');
+        benefitsLink.classList.remove('highlight');
+        contactLink.classList.remove('highlight-contact');
         return;
     }else if(window.innerWidth > 760 && scrollPos > 2900){
-        contactMenu.classList.add('highlight-contact');
-        reviewsMenu.classList.remove('highlight');
+        contactLink.classList.add('highlight-contact');
+        reviewsLink.classList.remove('highlight');
         return;
-    }
-    if(window.innerWidth < 760){
-        elem.classList.remove("highlight");
-        contactMenu.classList.remove('highlight-contact');
     }
 }
 window.addEventListener('scroll', highlightMenu);
 window.addEventListener('click', highlightMenu);
+//close mobile menu when clicking on a menu item
+const closeMenu = () => {
+if(hambIcon.classList.contains('is-active')){
+    hambIcon.classList.toggle('is-active');
+    menuLinks.classList.remove('active');
+}
+}
+menuLinks.addEventListener('click', closeMenu);
+navLogo.addEventListener('click', closeMenu);
