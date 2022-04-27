@@ -49,7 +49,7 @@
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"></button>
     </div>
-    <div class="carousel-inner"   id="home-page">
+    <div class="carousel-inner" id="home-page">
       <div class="carousel-item active">
         <img src="img/show12.jpg" class="" alt="dog trainer">
         <div class="carousel-caption">
@@ -185,8 +185,10 @@
             <li><span class="fw-bold">Address:</span> 49 Moon River Ranch Ln, Clinton, MT 59825</li>
             <li><span class="fw-bold">Email:</span> moonriverk9@gmail.com</li>
             <li><span class="fw-bold">Phone:</span> (406) 274-5120</li>
-            <li><span class="fw-bold">Social Media:</span> <a href="https://www.facebook.com/moonriverk9/"><i class="bi bi-facebook text-dark mx-1"></i></a>
-              <a href="https://www.youtube.com/channel/UCbOrKSIoHlvxOtaLvxaTelg"><i class="bi bi-youtube text-dark mx-1"></i></a>
+            <li><span class="fw-bold">Social Media:</span> <a href="https://www.facebook.com/moonriverk9/"><i
+                  class="bi bi-facebook text-dark mx-1"></i></a>
+              <a href="https://www.youtube.com/channel/UCbOrKSIoHlvxOtaLvxaTelg"><i
+                  class="bi bi-youtube text-dark mx-1"></i></a>
               <a href="https://www.instagram.com/moonriverk9/?hl=en"><i class="bi bi-instagram text-dark mx-1"></i></a>
             </li>
             <li>M-F: 10-4pm</li>
@@ -194,9 +196,9 @@
             <li>Sun: Closed</li>
           </ul>
         </div>
-        
-          <div id="map" class="col"></div>
-        
+        <div class="col">
+          <div id="map"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -212,18 +214,33 @@
     crossorigin="anonymous"></script>
   <!--script for google map js api-->
   <script>
-    function initMap(){
+    function initMap() {
+      //map options
       let options = {
-        zoom: 16,
-        center: {lat:46.713965,lng:-113.569779}
+        zoom: 14,
+        center: { lat: 46.713965, lng: -113.569779 },
+        controlSize: 25
       }
+      //new map
       const map = new google.maps.Map(document.getElementById("map"), options);
-    }
+      map.setMapTypeId('satellite');
+      //map marker
+      let marker = new google.maps.Marker({
+        position:{ lat: 46.713965, lng: -113.569779 },
+        map:map
+      });
+      let infoWindow = new google.maps.InfoWindow({
+        content: '<h1>Moon River K9</h1>'
+      });
+      marker.addListener('click', function(){
+        infoWindow.open(map, marker);
+      });
+          }
   </script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsAjLrtaAk0zhV1B_PdZyHB_kVKLJXNBg&callback=initMap&v=weekly"
-      defer
-    ></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsAjLrtaAk0zhV1B_PdZyHB_kVKLJXNBg&callback=initMap&v=weekly"
+    defer></script>
   <script src="app.js"></script>
 </body>
+
 </html>
